@@ -3,7 +3,7 @@ extends ../../layouts/ui-layout.pug
 block variables
 	- var title = 'Кнопки - UI-kit и HTML фреймворк - Документация'
 	- var pageClass = 'body--dashboard'
-	
+	- var icon = 'i.fas.fa-arrow-right.button-arrow'
 
 block content
 	include ../../sections/ui-nav-inside-ui.pug
@@ -15,19 +15,22 @@ block content
 				em Одна кнопка ниже оформлена для примера.
 
 			.section-ui
-				+button('Вперед', '#') 
+				+button('Вперед','#')
+				i.fas.fa-arrow-right
 			.section-ui
-				+button('Подробнее', '#')
+				+button('Подробнее','#')
 			.section-ui
-				+button('Редактировать', '#', 'button--edit')
+				+button('Редактировать','#','button--edit')
 			.section-ui
-				+button('Удалить', '#', 'button--del') 
+				+button('Удалить','#','button--del') 
 			.section-ui
-				+button('Сохранить', '#', 'button--save')
+				+button('Сохранить','#','button--save')
 			.section-ui
-				+button('Войти', '#', 'button--enter')
+				+button('Войти','#','button--enter')
 			.section-ui
-				+button('Профиль', '#', 'button--profile')
+				+button('Профиль','#','button--profile')
 
 			pre.
 				+button('Подробнее', '#')
+block scripts
+	script(defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js")
