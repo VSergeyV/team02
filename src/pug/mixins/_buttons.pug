@@ -1,7 +1,7 @@
 mixin button(text, link, dopClass, icon)
 	a(class="button " + dopClass href=link) 
 		if icon
-			| #{text}
+			| #{text}&nbsp;
 			i(class= icon)
 		else
 			| #{text}
