@@ -3,6 +3,7 @@ extends ../../layouts/ui-layout.pug
 block variables
 	- var title = 'Комментарии - UI-kit и HTML фреймворк - Документация'
 	- var pageClass = 'body--dashboard'
+	- var name = "Юрий Ключевский"
 
 block content
 	include ../../sections/ui-nav-inside-ui.pug
@@ -10,3 +11,13 @@ block content
 	.main-wrapper
 		.container.container--left
 			.title.mb-0 Комментарии
+			.title-2.ml-20.mb-15 Оставить комментарий
+			.comment-add-wrapper.ml-20
+				img(src="../../img/avatars/avatar-1.jpg" height="48px" width="48px" style="border-radius: 40px;").float-left
+				.comment-add-block
+					.comment-add-block__name= name
+					.comment-add-block__error(style="background-color: red; height: 44px; padding-top: 14px; padding-left: 16px; color: white; border-radius: 4px;") Комментарий не может быть пустым
+					.comment-add-block__text(style="width: 834px; height: 100px; border: 1px solid grey;") Присоединится к обсуждению
+					.comment-add__button.mt-10
+					+button('Опубликовать', '#')
+
