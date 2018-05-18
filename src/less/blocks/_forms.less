@@ -45,7 +45,12 @@
 }
 
 .checkbox__input{
-	display: none;
+	width: 0.1px;	
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;	
 }
 
 .checkbox__input:checked + .checkbox__check-inner{
@@ -63,7 +68,13 @@
 	background-image: url("../img/form-ui/check.png");
 	background-repeat: no-repeat;
 	background-position: center -10px;
+	cursor: pointer;
 	.transition	
+}
+
+.checkbox__input:focus + .checkbox__check-inner,
+.checkbox__input.has-focus + .checkbox__check-inner{
+	box-shadow: 0px 0px 1px 2px @color-shadow-gray;
 }
 
 /* RADIO */
@@ -72,13 +83,18 @@
 }
 
 .radio__input{
-	display: none;	
+	width: 0.1px;	
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
 
 .radio__input:checked + .radio__check-inner{
 	background: @color-active-blue;
 	border: 3px solid @color-white ;	
-    box-shadow: 0 0 0 3px @color-radio-blue;
+	box-shadow: 0 0 0 3px @color-radio-blue;
 }
 
 .radio__check-inner{
@@ -90,12 +106,18 @@
 	display: inline-block;
 	width: 14px;
 	height: 14px;
-    box-shadow: 0 0 0 2px @color-white, 0 0 0 3px @color-radio-gray;
+	box-shadow: 0 0 0 2px @color-white, 0 0 0 3px @color-radio-gray;
 	background-color: @color-white;
 	border: 1px solid @color-white;	 
 	outline: none;	
 	border-radius: 50%;
+	cursor: pointer;
 	.transition	
+}
+
+.radio__input:focus + .radio__check-inner,
+.radio__input.has-focus + .radio__check-inner{
+	box-shadow: 0 0 0 3px @color-radio-blue, 0 0 0 5px @color-shadow-gray;
 }
 
 /* FILE */
@@ -151,9 +173,9 @@
 }
 
 .uploaded-image__button{
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
 }
 
 /* INPUT and TEXTAREA */
