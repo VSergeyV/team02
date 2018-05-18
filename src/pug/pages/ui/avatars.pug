@@ -10,9 +10,11 @@ block content
 	.main-wrapper
 		.container.container--left
 			.title.mb-0 Аватарки
-			.title.mb-0 Большая аватарка
+			
+			p Образец большой и маленькой аватарок (с кодом)
+			+avatar('photo-big.jpg')
+			<code>+avatar('photo-big.jpg')</code>
+			
 
-				+avatar('photo-big.jpg')
-
-		.title.mb-0 Маленькая аватарка				
-				+avatar-small('avatar-1.jpg')
+			+avatar-small('avatar-1.jpg')
+			<code>+avatar-small('avatar-1.jpg')</code>
