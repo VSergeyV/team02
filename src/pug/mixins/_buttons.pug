@@ -1,2 +1,7 @@
-mixin button(text, link)
-	a(class="button" href=link) #{text}	
+mixin button(text, link, dopClass, icon)
+	a(class="button " + dopClass href=link) 
+		if icon
+			| #{text}&nbsp;
+			i(class= icon)
+		else
+			| #{text}
