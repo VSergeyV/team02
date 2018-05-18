@@ -11,6 +11,11 @@ block content
 		.container.container--left
 			.title.mb-0 Комментарии
 
-	.container.mt-40
-		+comment-registration()
-		pre +comment-registration()
+			.section-ui
+				+comment-registration()
+					p #[a(href="#") Войдите] или #[a(href="#") зарегистрируйтесь]<br>чтобы оставить комментарий
+
+
+
+
+
