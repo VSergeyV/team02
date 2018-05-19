@@ -1,1 +1,18 @@
 // Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
+
+mixin comment(imgName, userName, date, text)
+
+	.user-comment
+		
+		.user-comment-avatar
+			img(src="../../img/avatars/" + imgName)
+		.user-comment-wrap
+			.comment-wrap
+				.user-name= userName
+				.user-date
+					i(class="far fa-clock")
+					span.user-date--dat
+						|#{date}
+			p.user-text
+				|#{text}
+	
