@@ -41,5 +41,13 @@
     "jquery": "^3.3.1",
     "normalize.css": "^8.0.0"
   },
-  "description": ""
+  "description": "## Запуск сборки проекта В адресе вашего проекта на ПК не должно быть кириллицы. Идеально — создайте с корне диска С: или D: папку \"projects\" и разместите в нее папку вашего проекта. У вас может получится что то похожее на это: C:\\projects\\team02",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marykaweb/team02.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marykaweb/team02/issues"
+  },
+  "homepage": "https://github.com/marykaweb/team02#readme"
 }

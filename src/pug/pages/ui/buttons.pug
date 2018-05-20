@@ -3,6 +3,7 @@ extends ../../layouts/ui-layout.pug
 block variables
 	- var title = 'Кнопки - UI-kit и HTML фреймворк - Документация'
 	- var pageClass = 'body--dashboard'
+	- var icon = 'i.fas.fa-arrow-right.button-arrow'
 
 block content
 	include ../../sections/ui-nav-inside-ui.pug
@@ -14,6 +15,20 @@ block content
 				em Одна кнопка ниже оформлена для примера.
 
 			.section-ui
-				+button('Подробнее', '#') 
+				+button('Вперед','#','','fas fa-arrow-right icon-style')
+				//- i.fas.fa-arrow-right
+			.section-ui
+				+button('Подробнее','#')
+			.section-ui
+				+button('Редактировать','#','button--edit')
+			.section-ui
+				+button('Удалить','#','button--del') 
+			.section-ui
+				+button('Сохранить','#','button--save')
+			.section-ui
+				+button('Войти','#','button--enter')
+			.section-ui
+				+button('Профиль','#','button--profile')
+
 			pre.
 				+button('Подробнее', '#')
