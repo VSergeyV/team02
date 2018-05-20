@@ -12,8 +12,10 @@ block content
 			.title.mb-0 Комментарии
 
 			.section-ui
-				+comment-registration()
-					p #[a(href="#") Войдите] или #[a(href="#") зарегистрируйтесь]<br>чтобы оставить комментарий
+				include ../../sections/comment-register.pug
+			pre.
+				include ../../sections/comment-register.pug
+
 
 
 
