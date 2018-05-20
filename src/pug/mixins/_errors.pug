@@ -1,9 +1,8 @@
 mixin error(title)
-	.error
-		.p= title
+	.error= title
+
 mixin error-with-desc(title)
-	.error-with-desc
-		.p= title
-		.error-with-desc-bottom
-			.error-with-desc-text
-				block
+	.error-with-desc= title
+	.error-with-desc-bottom
+		.error-with-desc-text
+			block
