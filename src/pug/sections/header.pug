@@ -38,13 +38,15 @@ include ../mixins/_header.pug
 					p.header__title.mb-0 Digital Lifestyle
 					p.header__subtitle.mt-0 Сайт IT специалиста
 			.header-user__block
-				.header-user__profil
-					img(src="../../img/avatars/avatar-1.jpg", alt="аватар" height="48px" width="48px" style="border-radius: 45px;").header-user__avatar
+				.header-user__profil.float-left.mr-20
+					+avatar-small('avatar-1.jpg')
 				.header-user__profil-block
 					.header-user__name= name
 					.header-user__rank= rank
 					.header-user__buttons-group
-						.button(style="width: 100px; height: 26px; font-size: 12px; padding-right: -5px; color: white; background-color: blue; border: none;") Профиль
-						.button(style="width: 86px; height: 26px; margin-left: 10px; font-size: 12px; color: white; background-color: blue; border: none;") Выход
+						.header-user__buttons-profile.mr-10
+							+button('Профиль','#','button--profile')
+						.header-user__buttons-signout
+							+button('Выход','#','button--profile')
 		.header__nav
 			+navigation(navigation)

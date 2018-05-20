@@ -1,7 +1,6 @@
 include ../mixins/_header.pug
 
 - var name = "Юрий Ключевский"
-- var badge = "Администратор"
 
 -
 	var navigation = [
@@ -13,30 +12,29 @@ include ../mixins/_header.pug
 	]
 
 //- Шапка администратор
-.header-admin-wrapper
-	.header-admin
-		.header-admin__profil
-			img(src="../../img/avatars/avatar-1.jpg", alt="" height="49" width="49" style="border-radius:45px;")
-			.header-admin__block
-				.header-admin__name= name
-				.header-admin__badge(style="width: 100px; height: 26px; font-size: 10px; padding-right: -5px; padding-top: 7px; padding-left: 10px; color: white; background-color: lightblue; border-radius: 45px; ")= badge
-		.header-admin-nav
-			+navigation_admin('fa fa-plus-circle', '#', 'Пост')
-			+navigation_admin('fa fa-plus-circle', '#', 'Работа')
-			+navigation_admin('fa fa-edit', '#', 'Обо мне')
-			+navigation_admin('fa fa-edit', '#', 'Контакты')
-			+navigation_admin('fa fa-envelope', '#', 'Сообщение')
-		.header-admin__signout
-			+navigation_admin_signout('fa fa-sign-out-alt', '#', 'Выход')
-	.header
-		.header--vignette
-			.header__top.mb-0
-				.header-admin__general
-					.header__logo
-						a.header__logo-icon-link(href="#")
-							i.far.fa-paper-plane
-						.header__block-title
-							p.header__title.mb-0 Digital Lifestyle
-							p.header__subtitle.mt-0 Сайт IT специалиста
-			.header__nav-block
-				+navigation(navigation)
+.header-admin
+	.header-admin__profil
+		+avatar-small('avatar-1.jpg')
+		.header-admin__block
+			.header-admin__name= name
+			+badge('Администратор')
+	.header-admin-nav
+		+navigation_admin('fa fa-plus-circle', '#', 'Пост')
+		+navigation_admin('fa fa-plus-circle', '#', 'Работа')
+		+navigation_admin('fa fa-edit', '#', 'Обо мне')
+		+navigation_admin('fa fa-edit', '#', 'Контакты')
+		+navigation_admin('fa fa-envelope', '#', 'Сообщение')
+	.header-admin__signout
+		+navigation_admin_signout('fa fa-sign-out-alt', '#', 'Выход')
+.header
+	.header--vignette
+		.header__top.mb-0
+			.header-admin__general
+				.header__logo
+					a.header__logo-icon-link(href="#")
+						i.far.fa-paper-plane
+					.header__block-title
+						p.header__title.mb-0 Digital Lifestyle
+						p.header__subtitle.mt-0 Сайт IT специалиста
+		.header__nav-block
+			+navigation(navigation)
