@@ -11,13 +11,19 @@ block content
 	.main-wrapper
 		.container.container--left
 			.title.mb-0 Комментарии
-			.title-2.ml-20.mb-15 Оставить комментарий
-			.comment-add-wrapper.ml-20
-				img(src="../../img/avatars/avatar-1.jpg" height="48px" width="48px" style="border-radius: 40px;").float-left
+			.title-2.mb-15 Оставить комментарий
+			.comment-add-wrapper
+				.comment-add__avatar.float-left
+					+avatar-small('avatar-1.jpg')
 				.comment-add-block
 					.comment-add-block__name= name
-					.comment-add-block__error(style="background-color: red; height: 44px; padding-top: 14px; padding-left: 16px; color: white; border-radius: 4px;") Комментарий не может быть пустым
-					.comment-add-block__text(style="width: 834px; height: 100px; border: 1px solid grey;") Присоединится к обсуждению
-					.comment-add__button.mt-10
+					+error('Комментарий не может быть пустым.')
+					.comment-add-block__text.mt-10
+						textarea(rows="5" placeholder="Введите текст сообщения").textarea Присоединиться к обсуждению
+				.comment-add__button.mt-10
 					+button('Опубликовать', '#')
+
+			.section-ui.mt-20
+				.title-medium Подключение из файла
+				pre include ../../pages/ui/comment-add.pug
 
