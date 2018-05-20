@@ -10,11 +10,13 @@ block content
 	.main-wrapper
 		.container.container--left
 			.title.mb-0 Бейджи
-
-			p Вариант с кодом <code>+badge('Администратор')</code>
-			+badge('Администратор')
-
-			p Вариант с кодом <code>+badge('Пользователь')</code> 
-			+badge('Пользователь')
-			
-				
+			p Вариант "Администратор"
+			pre.
+				+badge('Администратор')
+			.section-ui
+				+badge('Администратор')
+			p Вариант "Пользователь" 
+			pre.
+				+badge('Пользователь')
+			.section-ui
+				+badge('Пользователь')
