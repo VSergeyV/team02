@@ -34,13 +34,4 @@ $(document).ready(function() {
 		.on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
 	});
 
-	// Firefox bug fix for checkboxes and radiobuttons
-	$('.radio__input')
-		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
-		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); });
-
-	$('.checkbox__input')
-		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
-		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); });
-
 });
