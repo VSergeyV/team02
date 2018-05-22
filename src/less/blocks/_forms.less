@@ -1,14 +1,14 @@
-@color-active-blue:#1e6791;
-@color-radio-blue:#cae2f8;
-@color-radio-gray:#c3cdd3;
-@color-white:#ffffff;
+@color-active-blue: #1e6791;
+@color-radio-blue: #cae2f8;
+@color-radio-gray: #c3cdd3;
+@color-white: #ffffff;
 @color-inactive-gray: #b1bfc7;
-@color-shadow-gray:#e2e9f0;
-@color-active-border-gray:#999999;
+@color-shadow-gray: #e2e9f0;
+@color-active-border-gray: #999999;
 
-@checkbox-border-radius:2px;
-@file-button-radius:4px;
-@input-border-radius:3px;
+@radius-checkbox-border:2px;
+@radius-file-button:4px;
+@radius-input-border:3px;
 
 .fieldset {
 	border-style: none;
@@ -45,7 +45,12 @@
 }
 
 .checkbox__input{
-	display: none;
+	width: 0.1px;	
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;	
 }
 
 .checkbox__input:checked + .checkbox__check-inner{
@@ -59,11 +64,17 @@
 	width: 20px;
 	height: 20px;
 	background-color: @color-active-blue;
-	border-radius: @checkbox-border-radius;
+	border-radius: @radius-checkbox-border;
 	background-image: url("../img/form-ui/check.png");
 	background-repeat: no-repeat;
 	background-position: center -10px;
+	cursor: pointer;
 	.transition	
+}
+
+.checkbox__input:focus + .checkbox__check-inner,
+.checkbox__input.has-focus + .checkbox__check-inner{
+	box-shadow: 0px 0px 1px 2px @color-shadow-gray;
 }
 
 /* RADIO */
@@ -72,28 +83,41 @@
 }
 
 .radio__input{
-	display: none;	
+	width: 0.1px;	
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
 
 .radio__input:checked + .radio__check-inner{
-	border: 3px solid @color-radio-blue;    
-	background-image: url("../img/form-ui/radio.png");	
+	background: @color-active-blue;
+	border: 3px solid @color-white ;	
+	box-shadow: 0 0 0 3px @color-radio-blue;
 }
 
 .radio__check-inner{
-	margin-right: 10px;
+	margin-right: 13px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 3px;
 	vertical-align: top;
 	display: inline-block;
-	width: 20px;
-	height: 20px;
-	border: 1px solid @color-radio-gray;	 
-	outline: none;
+	width: 14px;
+	height: 14px;
+	box-shadow: 0 0 0 2px @color-white, 0 0 0 3px @color-radio-gray;
 	background-color: @color-white;
+	border: 1px solid @color-white;	 
+	outline: none;	
 	border-radius: 50%;
-	background-image: none;
-	background-position: center;
-	background-repeat: no-repeat;
+	cursor: pointer;
 	.transition	
+}
+
+.radio__input:focus + .radio__check-inner,
+.radio__input.has-focus + .radio__check-inner{
+	box-shadow: 0 0 0 3px @color-radio-blue, 0 0 0 5px @color-shadow-gray;
 }
 
 /* FILE */
@@ -118,7 +142,7 @@
 	background-color: @color-inactive-gray;
 	color: @color-white;
 	font-size: 1rem;	
-	border-radius: @file-button-radius;
+	border-radius: @radius-file-button;
 	padding: 10px 12px;
 	cursor: pointer;
 }
@@ -128,12 +152,10 @@
 	background-color: @color-active-blue;
 }
 
-/*
 .file__input:focus + .file__inner-label,
 .file__input.has-focus + .file__inner-label{
-	outline: 1px dotted #000;
-	outline: -webkit-focus-ring-color auto 5px;
-}*/
+	box-shadow: 0px 0px 1px 2px @color-shadow-gray;
+}
 
 .file__inner-label * {
 	pointer-events: none;
@@ -151,9 +173,9 @@
 }
 
 .uploaded-image__button{
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
 }
 
 /* INPUT and TEXTAREA */
@@ -176,7 +198,7 @@
 
 .input, .textarea{	
 	outline: none !important;
-	border-radius: @input-border-radius;
+	border-radius: @radius-input-border;
 	border:1px solid @color-inactive-gray;
 	outline: none !important;
 	box-shadow: none;
