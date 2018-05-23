@@ -13,3 +13,8 @@ mixin button(text, link, dopClass, icon)
 				i(class= icon)
 			else
 				| #{text}
+
+mixin button-back(text, link)
+	a(class="button " href=link)
+		i(class='fas fa-arrow-left icon-style icon-style--back')
+		|#{text}
