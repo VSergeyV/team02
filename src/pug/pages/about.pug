@@ -1,0 +1,97 @@
+include ../layouts/_mixins-links.pug
+
+block variables
+	- var title = 'Обо мне'
+	- var pageClass = 'about-page'
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ../layouts/_head-part.pug
+		
+	body(class=pageClass)
+
+		include ../sections/header-admin.pug
+		// include ../sections/header.pug
+		
+		block content
+			.section-ui.section
+				.container
+					.row
+						.col-xl-3
+							+avatar('photo-big.jpg')
+						.col-xl-4
+							h2 Емельян Казаков
+							p
+								| Я веб разработчик из Казани. Мне 28 лет.  Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+							p
+								| Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.
+								br
+								|Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут всё классно и красиво!
+						.col-xl-2.offset-3
+							+button('Редактировать','#','button--edit')
+						
+
+			.section-ui.section.section-technologi
+				.container
+					.row
+						.col-xl-3.offset-3
+							h2 Технологии 
+							br 
+							|Которые использую в работе
+					.row.block
+						.col-xl-3
+							| Frontend
+						.col-xl-2
+							.circle.circle-frontend
+								span HTML5
+						.col-xl-2
+							.circle.circle-frontend
+								span CSS3
+						.col-xl-2
+							.circle.circle-frontend
+								span JS
+						.col-xl-2
+							.circle.circle-frontend
+								span JQuery
+					.row.block
+						.col-xl-3
+							| Backend
+						.col-xl-2
+							.circle.circle-backend
+								span PHP
+						.col-xl-2
+							.circle.circle-backend
+								span MySql
+					.row.block
+						.col-xl-3
+							| Workflow
+						.col-xl-2
+							.circle.circle-workflow
+								span Git
+						.col-xl-2
+							.circle.circle-workflow
+								span Gulp
+						.col-xl-2
+							.circle.circle-workflow
+								span Bower
+						.col-xl-2
+							.circle.circle-workflow
+								span WebPack	
+			.section-ui.section
+				.container
+					.row
+						.col-xl-9.offset-3
+							h2.experience Опыт работы
+							span.experience-data февраль 2017  — по настоящее время
+							h3.experience-in Frontend разработчик, Вконтактe, mail.ru group
+							p.experience-text Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
+							span.experience-data сентябрь 2015 — январь 2017
+							h3.experience-in Разработчик интерфейсов, Яндекс
+							p.experience-text Работы в проекте Яндекс Музыка. Создание новых разделов сервиса. Оптимизация и создание новых копанентов платформы.
+							span.experience-data март 2013 — август 2015
+							h3.experience-in Веб-разработчик, Cloud studio
+							p.experience-text Frontend и Backend для клиентских проектов студии. Работа над студийнойя интернет магазинов. Участие в разработке CRM системы "Sky CRM". Стек используемых технологий: Git,JS, Angular.
+
+		include ../sections/footer.pug
+		include ../layouts/_footer-part.pug
