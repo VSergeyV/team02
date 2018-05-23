@@ -1,20 +1,19 @@
-extends ../layouts/ui-layout.pug
+extends ../layouts/clean.pug
 
 block variables
 	- var title = 'Страница с работами'
 	- var pageClass = 'body--dashboard'
 
 block content
-	include ../sections/ui-nav-inside-ui.pug
 	include ../sections/header-admin.pug
 
 	.main-wrapper
 		.container.container--center
 			.row.justify-content-between.pl-15.pr-15.pt-50
-				.title.title-works
-					strong
-						| Работы 
-					| которые сделал я и моя команда
+				.title-1
+					//- strong
+					//- 	| Работы 
+					| Работы, которые сделал я и моя команда
 				.section-ui.align-self-center
 					+button('Добавить работу','#','button--edit')
 			.row.pb-35
