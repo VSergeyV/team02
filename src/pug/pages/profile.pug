@@ -8,11 +8,12 @@ block content
 	include ../sections/header-user.pug
 	.container
 		.row.align-items-center.mt-40
-			.col
+			.col.offset-md-1
 				.title-1.color Профиль
 			.col.text-right
-				+button('Редактировать','#')
-		.row.justify-content-center
+				+button('Редактировать','#','button--edit')
+
+		.row.offset-md-1
 			.col-md-auto
 				+avatar('photo-big.jpg')
 			.col
@@ -26,11 +27,13 @@ block content
 				.user-info
 					.user-info__title Страна, Город
 					.user-info__desc Россия, Казань
-				
-		.title-2.color Комментарии пользователя
-		.profile-comments.mb-100
-			+comment-no-avatar('Поездка в LA', '05 Мая 2017 года в 15:45', 'Замечательный парк, обязательно отправлюсь туда этим летом.')
-			+comment-no-avatar('Ноутбук для веб-разработчика', '15 Мая 2017 года в 10:02', 'Замечательный парк, обязательно отправлюсь туда этим летом.')
-			+comment-no-avatar('Настройка Sublime', '12 Мая 2017 года в 20:39', 'Замечательный парк, обязательно отправлюсь туда этим летом.')
+	.container
+		.row.justify-content-center
+			.col-md-10
+				.title-2.color Комментарии пользователя
+				.profile-comments.mb-100
+					+comment-no-avatar('Поездка в LA', '05 Мая 2017 года в 15:45', 'Замечательный парк, обязательно отправлюсь туда этим летом.')
+					+comment-no-avatar('Ноутбук для веб-разработчика', '15 Мая 2017 года в 10:02', 'Замечательный парк, обязательно отправлюсь туда этим летом.')
+					+comment-no-avatar('Настройка Sublime', '12 Мая 2017 года в 20:39', 'Замечательный парк, обязательно отправлюсь туда этим летом.')
 
 	include ../sections/footer.pug
