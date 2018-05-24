@@ -20,69 +20,112 @@ html(lang="ru")
 					.row
 						.col-xl-3
 							+avatar('photo-big.jpg')
-						.col-xl-4
-							h2 Емельян Казаков
-							p
-								| Я веб разработчик из Казани. Мне 28 лет.  Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-							p
-								| Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.
-								br
-								|Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут всё классно и красиво!
-						.col-xl-2.offset-3
-							+button('Редактировать','#','button--edit')
-						
+						.col-xl-9
+							.row
+								.col-xl-6
+									h2.section-header.section-header--name Емельян Казаков
+								.col-xl-3.offset-3
+									+button('Редактировать','#','button--edit')
+							.row
+								.col-xl-11
+									p
+										| Я веб разработчик из Казани. Мне 28 лет.  Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+									p
+										| Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.
+										br
+										|Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут всё классно и красиво!
+									h3.section-subtitle Что я умею
+									p
+										|Меня привлекет Frontend разработка, это не только моя работа, но и хобби. 
+										br
+										|Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
 
 			.section-ui.section.section-technologi
 				.container
-					.row
-						.col-xl-3.offset-3
-							h2 Технологии 
-							br 
-							|Которые использую в работе
 					.row.block
-						.col-xl-3
-							| Frontend
+						.col-xl-3.text-center
+							h3.section-subtitle Frontend
 						.col-xl-2
-							.circle.circle-frontend
+							.pie-wrapper.progress-frontend
 								span HTML5
+								.pie
+									.left-side.half-circle
+									.right-side.half-circle
+								.shadow
 						.col-xl-2
-							.circle.circle-frontend
+							.pie-wrapper.progress-frontend
 								span CSS3
+								.pie
+									.left-side.half-circle
+									.right-side.half-circle
+								.shadow
 						.col-xl-2
-							.circle.circle-frontend
+							.pie-wrapper.progress-frontend
 								span JS
+								.pie
+									.left-side.half-circle
+									.right-side.half-circle
+								.shadow
 						.col-xl-2
-							.circle.circle-frontend
+							.pie-wrapper.progress-frontend
 								span JQuery
+								.pie
+									.left-side.half-circle
+									.right-side.half-circle
+								.shadow
 					.row.block
-						.col-xl-3
-							| Backend
+						.col-xl-3.text-center
+							h3.section-subtitle Backend
 						.col-xl-2
-							.circle.circle-backend
+							.pie-wrapper.progress-backend
 								span PHP
+								.pie
+									.left-side.half-circle
+									.right-side.half-circle
+								.shadow
 						.col-xl-2
-							.circle.circle-backend
+							.pie-wrapper.progress-backend
 								span MySql
+								.pie
+									.left-side.half-circle
+									.right-side.half-circle
+								.shadow
 					.row.block
-						.col-xl-3
-							| Workflow
+						.col-xl-3.text-center
+							h3.section-subtitle Workflow
 						.col-xl-2
-							.circle.circle-workflow
+							.pie-wrapper.progress-workflow
 								span Git
+								.pie
+									.left-side.half-circle
+									.right-side.half-circle
+								.shadow
 						.col-xl-2
-							.circle.circle-workflow
+							.pie-wrapper.progress-workflow
 								span Gulp
+								.pie
+									.left-side.half-circle
+									.right-side.half-circle
+								.shadow
 						.col-xl-2
-							.circle.circle-workflow
+							.pie-wrapper.progress-workflow
 								span Bower
+								.pie
+									.left-side.half-circle
+									.right-side.half-circle
+								.shadow
 						.col-xl-2
-							.circle.circle-workflow
-								span WebPack	
+							.pie-wrapper.progress-workflow
+								span WebPack
+								.pie
+									.left-side.half-circle
+									.right-side.half-circle
+								.shadow
 			.section-ui.section
 				.container
 					.row
 						.col-xl-9.offset-3
-							h2.experience Опыт работы
+							h2.section-header.experience Опыт работы
 							span.experience-data февраль 2017  — по настоящее время
 							h3.experience-in Frontend разработчик, Вконтактe, mail.ru group
 							p.experience-text Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
