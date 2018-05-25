@@ -52,7 +52,15 @@ block content
 							+file("file1")
 					.fieldset
 						pre.							
-							+file("file1")							
+							+file("file1")
+					fieldset.fieldset
+						.fieldset__title Прикрепить файл
+						.comment-row jpg, png, pdf, doc, весом до 2Мб.
+						.control-row
+							+input-file("file3")
+					.fieldset
+						pre.
+							+input-file("file3")
 					fieldset.fieldset
 						.fieldset__title Изображение
 						.comment-row Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.

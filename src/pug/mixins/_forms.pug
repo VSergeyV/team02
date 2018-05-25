@@ -37,6 +37,25 @@ mixin file(name,multiple,buttonText,emptyText,multipleSelectedText)
 		else
 			span.file__inner-caption Файл не выбран
 
+mixin input-file(name,multiple,buttonText,emptyText,multipleSelectedText)
+	-var buttonText=buttonText||"Выбрать файл"
+	if multiple
+		-var emptyText=emptyText||"Файлы не выбраны"
+	else
+		-var emptyText=emptyText||"Файл не выбран"
+	-var multipleSelectedText=multipleSelectedText||"Выбрано файлов: {count}"
+	.file
+		label.file__label
+			if multiple
+				input(type="file" name=name data-multiple-caption=multipleSelectedText multiple).file__input
+			else
+				input(type="file" name=name).file__input
+			span.file__inner-label.file__inner-label--large-radius #{buttonText}
+		if multiple
+			span.file__inner-caption Файлы не выбраны
+		else
+			span.file__inner-caption my-lovely-photo.jpg
+
 mixin uploaded-image(src,alt)
 	.uploaded-image
 		img(src=src alt=alt).uploaded-image__img
