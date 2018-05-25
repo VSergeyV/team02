@@ -1,17 +1,43 @@
 extends ../layouts/clean.pug
-//- include ../layouts/_mixins-links.pug
+include ../mixins/_header.pug
 
 block variables
 	- var title = 'Страница с отдельной работой'
 	- var pageClass = 'single-work-page'
 
 block content
-	
-	.wrapper
-	
-		include ../sections/header-admin.pug
+	//- Шапка администратор
+	.header-admin
+		.header-admin__profil
+			+avatar-small('avatar-1.jpg')
+			.header-admin__block
+				.header-admin__name= name
+				+badge('Администратор')
+		.header-admin-nav
+			+navigation_admin('fa fa-plus-circle', '#', 'Пост')
+			+navigation_admin('fa fa-plus-circle', '#', 'Работа')
+			+navigation_admin('fa fa-edit', '#', 'Обо мне')
+			+navigation_admin('fa fa-edit', '#', 'Контакты')
+			+navigation_admin('fa fa-envelope', '#', 'Сообщение')
+		.header-admin__signout
+			+navigation_admin_signout('fa fa-sign-out-alt', '#', 'Выход')
 
-		.project.container.mb-100.pb-20
+	.wrapper
+
+		.header.single-work-page__header
+			.header--vignette.single-work-page__header--vignette
+				.header__top.mb-0
+					.header-admin__general
+						.header__logo
+							a.header__logo-icon-link.single-work-page__header-logo-icon-link(href="#")
+								i.far.fa-paper-plane
+							.header__block-title
+								p.header__title.single-work-page__header-title.mb-0 Digital Lifestyle
+								p.header__subtitle.single-work-page__header-subtitle.mt-0 Сайт IT специалиста
+	
+		// include ../sections/header-admin.pug
+
+		.project.container.mb-100.mt-40.pb-20
 			.project__header.row.mb-45
 				.project__header-info.col-sm-9.offset-sm-1
 					.project__title.title-1.mt-0.mb-20 Верстка и frontend Интернет магазина
