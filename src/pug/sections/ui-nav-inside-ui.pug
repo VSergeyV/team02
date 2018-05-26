@@ -1,6 +1,6 @@
 .left-panel.blue-skin
 	.left-panel__section
-	.title-2 UI-KIT и PUG фреймворк
+	.title-2.pl-15 UI-KIT и PUG фреймворк
 
 	.left-panel__section
 		p.strong Документация
@@ -34,12 +34,31 @@
 			//- +linkLeftPanel("Вспомогательные элементы", "elements.html")
 			+linkLeftPanel("Шапка администратора", "header-admin.html")
 			+linkLeftPanel("Шапка общая", "header.html")
+			+linkLeftPanel("Шапка пользователя", "header-user.html")
 			+linkLeftPanel("Подвал сайта", "footer.html")
 
 	.left-panel__section
 		p.strong Страницы
 		.left-panel-nav
+			+linkLeftPanel("Главная", "../home.html")
 			+linkLeftPanel("Вход на сайт", "../login.html")
 			+linkLeftPanel("Регистрация", "../registration.html")
-			+linkLeftPanel("Страница Блог - с отдельным постом", "../blog-full-post.html")
-			+linkLeftPanel("Фильмотека", "../filmoteka.html")
+			p.strong Обо мне
+			+linkLeftPanel("Обо мне", "../about.html")
+			+linkLeftPanel("Обо мне - редактировать", "../about-editing.html")
+			p.strong Блог
+			+linkLeftPanel("Блог-пост - Добавить", "../blog-post-add.html")
+			+linkLeftPanel("Блог-пост - отдельный блог-пост", "../blog-full-post.html")
+			+linkLeftPanel("Блог", "../blog-posts.html")
+			p.strong Работы
+			+linkLeftPanel("Работы - Добавить", "../work-add.html")
+			+linkLeftPanel("Работы - отдельная работа", "../single-work-page.html")
+			+linkLeftPanel("Работы", "../works.html")
+			p.strong Профиль
+			+linkLeftPanel("Профиль", "../profile.html")
+			+linkLeftPanel("Профиль - редактировать", "../profile-edit.html")
+			p.strong Контакты
+			+linkLeftPanel("Контакты", "../page-contacts.html")
+			+linkLeftPanel("Контакты - редактировать", "../contact-edit.html")
+			+linkLeftPanel("Контакты - Сообщение от пользователя", "../contacts-user-message.html")
+			//- +linkLeftPanel("Фильмотека", "../filmoteka.html")
