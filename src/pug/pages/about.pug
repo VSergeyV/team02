@@ -15,7 +15,7 @@ html(lang="ru")
 		// include ../sections/header.pug
 		
 		block content
-			.section-ui.section
+			.section-ui.section.section-main
 				.container
 					.row
 						.col-xl-3
@@ -23,118 +23,124 @@ html(lang="ru")
 						.col-xl-9
 							.row
 								.col-xl-6
-									h2.section-header.section-header--name Емельян Казаков
+									h1.section-main_name Емельян Казаков
 								.col-xl-3.offset-3
 									+button('Редактировать','#','button--edit')
 							.row
-								.col-xl-11
-									p
-										| Я веб разработчик из Казани. Мне 28 лет.  Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-									p
-										| Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.
+								.col-xl-12.user-content
+									p.section-main_text
+										| Я веб разработчик из Казани. Мне 28 лет.
 										br
+										| Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+									p.section-main_text
+										| Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.
+									
 										|Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут всё классно и красиво!
-									h3.section-subtitle Что я умею
-									p
+									h3 Что я умею
+									p.section-main_text
 										|Меня привлекет Frontend разработка, это не только моя работа, но и хобби. 
 										br
 										|Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
 
 			.section-ui.section.section-technologi
 				.container
-					.row.block
+					.row
+						.col-xl-6.offset-3
+							h2.title-1 Технологии
+							span.title-medium Которые использую в работе
+					.row.stack
 						.col-xl-3.text-center
-							h3.section-subtitle Frontend
+							.title-3 Frontend
 						.col-xl-2
 							.pie-wrapper.progress-frontend
-								span HTML5
+								span.title-4 HTML5
 								.pie
 									.left-side.half-circle
 									.right-side.half-circle
 								.shadow
 						.col-xl-2
 							.pie-wrapper.progress-frontend
-								span CSS3
+								span.title-4 CSS3
 								.pie
 									.left-side.half-circle
 									.right-side.half-circle
 								.shadow
 						.col-xl-2
 							.pie-wrapper.progress-frontend
-								span JS
+								span.title-4 JS
 								.pie
 									.left-side.half-circle
 									.right-side.half-circle
 								.shadow
 						.col-xl-2
 							.pie-wrapper.progress-frontend
-								span JQuery
+								span.title-4 JQuery
 								.pie
 									.left-side.half-circle
 									.right-side.half-circle
 								.shadow
-					.row.block
+					.row.stack
 						.col-xl-3.text-center
-							h3.section-subtitle Backend
+							.title-3 Backend
 						.col-xl-2
 							.pie-wrapper.progress-backend
-								span PHP
+								span.title-4 PHP
 								.pie
 									.left-side.half-circle
 									.right-side.half-circle
 								.shadow
 						.col-xl-2
 							.pie-wrapper.progress-backend
-								span MySql
+								span.title-4 MySql
 								.pie
 									.left-side.half-circle
 									.right-side.half-circle
 								.shadow
-					.row.block
+					.row.stack
 						.col-xl-3.text-center
-							h3.section-subtitle Workflow
+							.title-3 Workflow
 						.col-xl-2
 							.pie-wrapper.progress-workflow
-								span Git
+								span.title-4 Git
 								.pie
 									.left-side.half-circle
 									.right-side.half-circle
 								.shadow
 						.col-xl-2
 							.pie-wrapper.progress-workflow
-								span Gulp
+								span.title-4 Gulp
 								.pie
 									.left-side.half-circle
 									.right-side.half-circle
 								.shadow
 						.col-xl-2
 							.pie-wrapper.progress-workflow
-								span Bower
+								span.title-4 Bower
 								.pie
 									.left-side.half-circle
 									.right-side.half-circle
 								.shadow
 						.col-xl-2
 							.pie-wrapper.progress-workflow
-								span WebPack
+								span.title-4 WebPack
 								.pie
 									.left-side.half-circle
 									.right-side.half-circle
 								.shadow
-			.section-ui.section
+			.section-ui.section.section-experience.user-medium
 				.container
 					.row
 						.col-xl-9.offset-3
-							h2.section-header.experience Опыт работы
-							span.experience-data февраль 2017  — по настоящее время
-							h3.experience-in Frontend разработчик, Вконтактe, mail.ru group
-							p.experience-text Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
-							span.experience-data сентябрь 2015 — январь 2017
-							h3.experience-in Разработчик интерфейсов, Яндекс
-							p.experience-text Работы в проекте Яндекс Музыка. Создание новых разделов сервиса. Оптимизация и создание новых копанентов платформы.
-							span.experience-data март 2013 — август 2015
-							h3.experience-in Веб-разработчик, Cloud studio
-							p.experience-text Frontend и Backend для клиентских проектов студии. Работа над студийнойя интернет магазинов. Участие в разработке CRM системы "Sky CRM". Стек используемых технологий: Git,JS, Angular.
+							.title-1.experience_title Опыт работы
+							span.experience_data февраль 2017  — по настоящее время
+							.title-4 Frontend разработчик, Вконтактe, mail.ru group
+							p Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
+							span.experience_data сентябрь 2015 — январь 2017
+							.title-4 Разработчик интерфейсов, Яндекс
+							p Работы в проекте Яндекс Музыка. Создание новых разделов сервиса. Оптимизация и создание новых копанентов платформы.
+							span.experience_data март 2013 — август 2015
+							.title-4 Веб-разработчик, Cloud studio
+							p Frontend и Backend для клиентских проектов студии. Работа над студийнойя интернет магазинов. Участие в разработке CRM системы "Sky CRM". Стек используемых технологий: Git,JS, Angular.
 
 		include ../sections/footer.pug
 		include ../layouts/_footer-part.pug
