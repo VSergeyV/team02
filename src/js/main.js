@@ -53,8 +53,8 @@ $(document).ready(function() {
 			});
 		}
 	});
-
-	$('.login-page-form__footer').on('click', function(e){
+// ----- check login form ----- //
+	$('.button--enter').on('click', function(e){
 		e.preventDefault();
 		input = $('.login-page-form__row').children('input');
 		mail = $('.login-page-form__row').children('input[type=email]');
@@ -82,4 +82,32 @@ $(document).ready(function() {
 		}
 	});
 
+// ----- check registration form ----- //
+	$('.button--registration').on('click', function(e){
+		e.preventDefault();
+		input = $('.registration-page-form__row').children('input');
+		mail = $('.registration-page-form__row').children('input[type=email]');
+		password = $('.registration-page-form__row').children('input[type=password]');
+		if ( mail.val() == '' && password.val() == '') {
+			$('.error').fadeIn();
+			$('.error').text('Введите логин и пароль');
+			input.focus(function(event) {
+				$('.error').fadeOut();
+			});
+		} else if ( mail.val() == '') {
+			$('.error').fadeIn();
+			$('.error').text('Введите логин');
+			mail.focus(function(event) {
+				$('.error').fadeOut();
+			});
+		} else if ( password.val() == '' ) {
+			$('.error').fadeIn();
+			$('.error').text('Введите пароль');
+			password.focus(function(event) {
+				$('.error').fadeOut();
+			});
+		} else {
+			// переходим на страницу профиля
+		}
+	});
 });
